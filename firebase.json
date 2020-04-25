@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "appStart",
+      "public": "dist/appStart",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

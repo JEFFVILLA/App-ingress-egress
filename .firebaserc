@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "appstateangular": {
+      "hosting": {
+        "appStart": [
+          "appstateangular"
+        ]
+      }
+    }
+  }
+}
