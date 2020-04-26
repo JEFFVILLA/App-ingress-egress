@@ -8,6 +8,7 @@ import { AppState } from '../app.reducer';
 import { Store } from '@ngrx/store';
 import * as authACtions from '../auth/auth.actions';
 import { Subscription } from 'rxjs';
+import { unSetItems } from '../ingreso-egreso/ingreso-egreso.actions';
 @Injectable({
   providedIn: 'root',
 })
@@ -39,7 +40,8 @@ export class AuthService {
       } else {
         this._user = null;
         this.store.dispatch(authACtions.unSetUser());
-        this.userSubscription.unsubscribe();
+        this.userSubscription?.unsubscribe();
+        this.store.dispatch(unSetItems());
       }
     });
   }
